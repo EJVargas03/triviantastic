@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from ''
 
 const instance = axios.create({
   baseURL: 'https://opentdb.com/',
