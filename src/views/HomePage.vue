@@ -1,21 +1,18 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-import useAPI from '@/composables/useAPI'
+import { onMounted, ref } from "vue";
+import useAPI from "@/composables/useAPI";
+import BaseTitle from "@/components/BaseTitle.vue";
 
-const api = useAPI()
-const categories = ref([])
+const api = useAPI();
+const categories = ref([]);
 
 onMounted(async () => {
-    categories.value = await api.getCategories()
-})
+  categories.value = await api.getCategories();
+});
 </script>
 
 <template>
-    <div class="brand">
-        <img class="logo" src="logo.svg" alt="logo" />
-        <h1 class="title">Triviantastic</h1>
-        <img class="logo" src="logo.svg" alt="logo" />
-    </div>
+  <BaseTitle />
     <div class="categories">
         <RouterLink v-for="category in categories" 
             :key="category.id" 
