@@ -8,8 +8,22 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
   },
-  rules: {
-    'prettier/prettier': ['error'],
+ rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        printWidth: 120,
+        tabWidth: 2,
+        useTabs: false,
+        semi: false,
+        singleQuote: true,
+        jsxSingleQuote: true,
+        trailingComma: 'all',
+        bracketSpacing: true,
+        bracketSameLine: false,
+        arrowParens: 'always',
+      },
+    ],
     'arrow-body-style': 'off',
     'prefer-arrow-callback': 'off',
   },
@@ -18,3 +32,4 @@ module.exports = {
     node: true,
   },
 }
+
