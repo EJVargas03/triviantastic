@@ -76,12 +76,11 @@ onMounted(async () => {
       @apply flex items-center justify-center rounded-lg text-center text-4xl text-white;
 
       &:hover {
-        @apply cursor-pointer;
+        @apply cursor-pointer shadow-xl shadow-purple-400;
       }
     }
   }
 }
-
 .loading {
   @apply flex h-full w-full items-center justify-center text-7xl;
 }

@@ -43,10 +43,14 @@ onMounted(async () => {
   @apply grid flex-grow grid-cols-4 gap-12;
 
   & .category {
-    @apply text-center flex h-32 items-center justify-center rounded-lg border-4 border-slate-500 py-4 font-bold uppercase transition-colors duration-300;
+    @apply text-center text-sm flex h-32 items-center justify-center 
+    rounded-lg border-4 border-slate-500 py-4 font-bold uppercase 
+    transition-colors duration-300;
 
       &:hover {
-        @apply cursor-pointer border-red-500 bg-red-500 text-white;
+        @apply cursor-pointer border-purple-900 bg-pink-500
+         text-white shadow-md transition-transform duration-300 
+         hover:scale-125 hover:shadow-slate-800 hover:shadow-2xl;;
       }
   }
 
